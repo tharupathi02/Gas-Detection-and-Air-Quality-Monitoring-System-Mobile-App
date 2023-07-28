@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color1">#069A8E</color>
+    <color name="color2">#2FA4FF</color>
+    <color name="color3">#90E0EF</color>
+    <color name="color4">#B1D0E0</color>
+    <color name="color5">#E5E0FF</color>
+    <color name="color6">#4B56D2</color>
+    <color name="color7">#82C3EC</color>
+    <color name="color8">#009EFF</color>
+    <color name="color9">#270082</color>
+    <color name="color10">#2F58CD</color>
+    <color name="color11">#362FD9</color>
+    <color name="color12">#6C00FF</color>
+    <color name="color13">#472183</color>
+
+    <color name="app_color1">#FFED00</color>
+    <color name="app_color2">#537FE7</color>
+    <color name="app_color3">#256D85</color>
+    <color name="app_color4">#E8F6EF</color>
+    <color name="app_color5">#898121</color>
+    <color name="app_color6">#C21010</color>
+
+
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+</resources>

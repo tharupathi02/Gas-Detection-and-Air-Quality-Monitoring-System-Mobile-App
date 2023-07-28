@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "638080101539",
+    "firebase_url": "https://iot-lec-default-rtdb.firebaseio.com",
+    "project_id": "iot-lec",
+    "storage_bucket": "iot-lec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638080101539:android:1f321110a63d5a6edae316",
+        "android_client_info": {
+          "package_name": "com.leoxtech.iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638080101539-nguom31sko9jua6k90lru93tlv35m6m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzwPJ-_lOQhqW7SWU_D30Xx-l30SxMuDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638080101539-nguom31sko9jua6k90lru93tlv35m6m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

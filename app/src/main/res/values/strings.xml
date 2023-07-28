@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Gas Detector</string>
+
+    <string name="connected_to">Connected to: </string>
+    <string name="_0">0</string>
+    <string name="air_blower_is_off">Air Blower is OFF</string>
+    <string name="air_blower_is_on">Air Blower is ON</string>
+    <string name="air_blower">Air Blower</string>
+    <string name="equipments_are_off">Equipments are OFF</string>
+    <string name="equipments_are_on">Equipments are ON</string>
+    <string name="kitchen_all_electric_equipments">Kitchen All Electric Equipments</string>
+    <string name="co_level_n_carbon_monoxide">CO Level (Carbon Monoxide)</string>
+    <string name="h2_level_hydrogen">H2 Level (Hydrogen)</string>
+    <string name="c2h4o_alcohol_level">C2H4O Level\n(Alcohol)</string>
+    <string name="ch4_level_methane">CH4 Level (Methane)</string>
+    <string name="lpg_gas_level">LPG Gas Level</string>
+    <string name="humidity">Humidity</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity_and_temperature">Humidity and Temperature</string>
+    <string name="lpg_gas_detection_level">LPG Gas Detection Level</string>
+    <string name="contentDescription">contentDescription</string>
+    <string name="mq_135_air_quality_sensor_readings_levels">MQ-135 Air Quality Sensor Readings</string>
+    <string name="mq_135_co_level">MQ-135 CO Level</string>
+    <string name="mq_135_co2_level">MQ-135 CO2 Level</string>
+    <string name="mq_135_acetone_level">MQ-135 Acetone Level</string>
+    <string name="mq_135_nh4_level">MQ-135 NH4 Level</string>
+    <string name="mq_6_all_time_data">LPG Gas Level Charts</string>
+    <string name="air_quality_all_time_data">Air Quality Charts</string>
+    <string name="lpg_gas_level_charts">LPG Gas Level Charts</string>
+    <string name="air_quality_charts">Air Quality Charts</string>
+    <string name="mq_135_alcohol_level">MQ-135 Alcohol Level</string>
+    <string name="mq_135_toluene_level">MQ-135 Toluene Level</string>
+    <string name="gas_detecting_and_air_quality_monitoring_system">Gas Detecting and Air Quality Monitoring System</string>
+    <string name="switch_panel">Switch Panel</string>
+    <string name="temperature_charts">Temperature Charts</string>
+    <string name="celsius">℃</string>
+    <string name="g_m_3">g.m-3</string>
+    <string name="ppm">ppm</string>
+</resources>

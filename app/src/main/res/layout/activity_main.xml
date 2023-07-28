@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gas_detecting_and_air_quality_monitoring_system"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imgWIFI"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/wifi"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/txtSSID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewMQ6AllTimeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    style="@style/Widget.Material3.CardView.Filled">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/gas"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewMQ135AllTimeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    style="@style/Widget.Material3.CardView.Filled">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/air"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewDHT11Chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    style="@style/Widget.Material3.CardView.Filled">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/temperature"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewSwitchPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_weight="1"
+                    style="@style/Widget.Material3.CardView.Filled">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/switchboard"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity_and_temperature"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtTemperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/celsius"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtTemperature"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/temperature"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtTemperature"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/temperature"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="20dp"
+                            android:translationX="20dp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/g_m_3"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtHumidity"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/humidity"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtHumidity"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/humidity"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="20dp"
+                            android:translationX="20dp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lpg_gas_detection_level"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtLPGLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ppm"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtLPGLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lpg_gas_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtLPGLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/gas"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="20dp"
+                            android:translationX="50dp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtH2Lvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtH2Lvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/h2_level_hydrogen"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtH2Lvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/h2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtCH4Lvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtCH4Lvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ch4_level_methane"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtCH4Lvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ch4"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtCOLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtCOLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/co_level_n_carbon_monoxide"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtCOLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/co"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtAlcoholLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtAlcoholLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/c2h4o_alcohol_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtAlcoholLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/c2ho4"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mq_135_air_quality_sensor_readings_levels"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135COLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135COLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_co_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135COLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/co"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135AlcoholLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135AlcoholLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_alcohol_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135AlcoholLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/c2ho4"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135CO2Lvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135CO2Lvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_co2_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135CO2Lvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/co2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135TolueneLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135TolueneLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_toluene_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135TolueneLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/c6h5ch3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135NH4Lvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135NH4Lvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_nh4_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135NH4Lvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/nh4"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:backgroundTint="@color/white"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txtMQ135AcetoneLvl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="38sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:alpha=".6"
+                            android:layout_toEndOf="@id/txtMQ135AcetoneLvl"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mq_135_acetone_level"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:translationY="-20dp"
+                            android:alpha=".4"
+                            android:layout_below="@id/txtMQ135AcetoneLvl"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ch3coch3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="10dp"
+                            android:translationY="30dp"
+                            android:translationX="20dp"
+                            android:alpha=".6"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:backgroundTint="@color/white"
+                style="@style/Widget.Material3.CardView.Filled">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtElectricEquipmentsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kitchen_all_electric_equipments"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/black"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtElectricEquipmentsTitle">
+
+                        <ImageView
+                            android:id="@+id/imgElectricEquipments"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/disconnected"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/contentDescription" />
+
+                        <TextView
+                            android:id="@+id/txtElectricEquipmentsStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toEndOf="@+id/imgElectricEquipments"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/equipments_are_off"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchElectricEquipments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                android:backgroundTint="@color/white"
+                style="@style/Widget.Material3.CardView.Filled">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtAirBlowerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/air_blower"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/black"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtAirBlowerTitle">
+
+                        <ImageView
+                            android:id="@+id/imgAirBlower"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/air_quality"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/contentDescription"/>
+
+                        <TextView
+                            android:id="@+id/txtAirBlowerStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toEndOf="@+id/imgAirBlower"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/air_blower_is_off"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/switchAirBlower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="15dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDataNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data found"
+            android:fontFamily="@font/poppins"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</ScrollView>
